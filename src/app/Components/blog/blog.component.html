@@ -1,1 +1,15 @@
-<p>blog works!</p>
+<li
+  [ngClass]="{
+    'list-group-item': true,
+    'list-group-item-success': loveIts > 0,
+    'list-group-item-danger': loveIts < 0
+  }"
+>
+  <div>
+    <h3>{{ title }}</h3>
+    <p>{{ content }}</p>
+    <p>{{ created_at | date }}</p>
+    <button type="button" class="btn btn-success">Love It</button>
+    <button type="button" class="btn btn-danger">Don't Love It</button>
+  </div>
+</li>

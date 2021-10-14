@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-blog',
@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent implements OnInit {
+
+  @Input() title: string = ""
+  @Input() content: string = ""
+  @Input() loveIts: number = 0
+  @Input() created_at: Date = new Date()
+
 
   constructor() { }
 
